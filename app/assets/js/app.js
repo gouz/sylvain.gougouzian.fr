@@ -12450,6 +12450,10 @@ this["cv"]["templates"]["portfolio"] = Handlebars.template({"compiler":[6,">= 2.
       name: 'axome.com - libs js',
       url: 'http://axome.com',
       img: 'axome'
+    }, {
+      name: 'neeed.com - snippet & js',
+      url: 'http://neeed.com',
+      img: 'neeed'
     }
   ];
 

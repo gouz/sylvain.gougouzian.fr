@@ -34,6 +34,11 @@ projects = [
     url: 'http://axome.com'
     img: 'axome'
   }
+  {
+    name: 'neeed.com - snippet & js'
+    url: 'http://neeed.com'
+    img: 'neeed'
+  }
 ]
 portfolio = document.querySelector '#projects'
 for p in projects
