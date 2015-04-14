@@ -1,0 +1,140 @@
+acronym {
+  border-bottom: 1px dashed #688da3;
+}
+#lifetime {
+  height: 500px;
+}
+#lifetime .current {
+  color: #1e1b42;
+}
+.ltps {
+  position: relative;
+  overflow: hidden;
+}
+.ltps span {
+  display: block;
+}
+.lt_part {
+  width: 100%;
+  position: absolute;
+  margin-left: 100%;
+}
+.ltp_wrapper {
+  position: relative;
+}
+.ltps_bar {
+  position: absolute;
+  top: 50%;
+  margin-top: -4px;
+  height: 8px;
+  background: #1e1b42;
+  border-radius: 8px;
+  width: 90%;
+  left: 50%;
+  margin-left: -45%;
+}
+.lt_slice {
+  position: absolute;
+  text-align: center;
+}
+.lts_even {
+  bottom: 50%;
+}
+.lts_odd {
+  top: 50%;
+}
+.lts_w {
+  position: relative;
+}
+.lts_name {
+  font-weight: bold;
+  color: #1e1b42;
+}
+.lts_where {
+  font-size: 0.9em;
+  margin-bottom: 7px;
+  color: #1e1b42;
+}
+.lts_date {
+  font-size: 0.8em;
+  position: relative;
+  z-index: 2;
+}
+.lts_location {
+  position: absolute;
+  font-size: 2em;
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+}
+.lts_rd {
+  width: 14px;
+  height: 14px;
+  border-radius: 10px;
+  background: #fff;
+  border: 3px solid #1e1b42;
+  position: absolute;
+  left: 50%;
+  margin-left: -7px;
+}
+.lts_odd .lts_w {
+  padding-top: 40px;
+}
+.lts_even .lts_w {
+  padding-bottom: 40px;
+}
+.lts_odd .lts_rd {
+  top: -7px;
+}
+.lts_even .lts_rd {
+  bottom: -7px;
+}
+.lts_odd .lts_location {
+  top: 2px;
+  transform: rotate(180deg);
+}
+.lts_even .lts_location {
+  bottom: 2px;
+}
+.lts_current i,
+.lts_current .lts_date {
+  color: #e52100;
+}
+.ltp_next,
+.ltp_prev {
+  width: 34px;
+  height: 34px;
+  border-radius: 34px;
+  background: #fff;
+  border: 3px solid #1e1b42;
+  position: absolute;
+  top: 50%;
+  margin-top: -17px;
+  text-align: center;
+  line-height: 30px;
+  color: #428bca;
+}
+.ltp_next:hover,
+.ltp_prev:hover {
+  border-color: #428bca;
+  color: #1e1b42;
+}
+.ltp_next {
+  right: 5%;
+}
+.ltp_prev {
+  left: 5%;
+}
+@media (max-width: 767px) {
+  #lifetime {
+    height: auto;
+    text-align: left;
+  }
+  ul {
+    padding-left: 1em;
+  }
+  .date,
+  .lieu {
+    display: block;
+  }
+}
