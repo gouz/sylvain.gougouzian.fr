@@ -35,13 +35,14 @@ hr.star-primary {
   margin: 25px auto 30px;
 }
 hr.star-primary:after {
-  content: "\f005";
+  content: "\f11b";
   font-family: FontAwesome;
   display: inline-block;
   position: relative;
   top: -0.8em;
   font-size: 2em;
   padding: 0 0.25em;
+  transform: rotate(-13deg);
 }
 hr.star-primary {
   border-color: $brand-primary;
