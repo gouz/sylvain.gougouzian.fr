@@ -155,6 +155,75 @@ section.success {
     text-decoration: underline;
   }
 }
+#skills {
+  background: $brand-primary;
+  color: white;
+  hr.star-primary {
+    border-color: white;
+    &:after {
+      background: $brand-primary;
+      color: white;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+  }
+  .skill-item {
+    margin: 0 0 15px;
+
+    .skill-link {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      box-shadow: 0 0 3px rgba(33, 33, 33, 0.3);
+      background: white;
+      height: 0;
+      padding-bottom: 98%;
+      padding-top: 2%;
+      border-radius: 50%;
+      text-align: center;
+
+      img {
+        width: 96%;
+        max-width: 96%;
+        display: inline-block;
+        border-radius: 50%;
+      }
+
+      .caption {
+        top: 0;
+        border-radius: 50%;
+        background: opacify($brand-success, .9);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all ease 0.5s;
+        &:hover {
+          opacity: 1;
+        }
+        .caption-content {
+          position: absolute;
+          width: 100%;
+          height: 20px;
+          font-size: 20px;
+          text-align: center;
+          top: 50%;
+          margin-top: -12px;
+          color: white;
+          i {
+            margin-top: -12px;
+          }
+          h3,
+          h4 {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
 @media(max-width:767px) {
   section {
     padding: 75px 0;

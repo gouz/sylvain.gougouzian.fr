@@ -12391,8 +12391,21 @@ this["cv"]["templates"]["portfolio"] = Handlebars.template({"compiler":[6,">= 2.
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
     + "\"></a></div>";
 },"useData":true});
+this["cv"]["templates"]["skill"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "<div class=\"col-sm-2 skill-item\"><a href=\""
+    + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
+    + "\" class=\"skill-link\" target=\"_blank\"><img src=\"assets/img/skills/"
+    + ((stack1 = (helpers.logoapi || (depth0 && depth0.logoapi) || alias1).call(depth0,(depth0 != null ? depth0.url : depth0),{"name":"logoapi","hash":{},"data":data})) != null ? stack1 : "")
+    + ".png\" class=\"img-responsive\" alt=\""
+    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + "\"><div class=\"caption\"><div class=\"caption-content\">"
+    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + "</div></div></a></div>";
+},"useData":true});
 (function() {
-  var $, i, len, p, portfolio, projects;
+  var $, competences, i, j, len, len1, p, portfolio, projects, s, skills;
 
   $ = jQuery;
 
@@ -12462,6 +12475,54 @@ this["cv"]["templates"]["portfolio"] = Handlebars.template({"compiler":[6,">= 2.
   for (i = 0, len = projects.length; i < len; i++) {
     p = projects[i];
     portfolio.innerHTML += window.cv.templates.portfolio(p);
+  }
+
+  skills = [
+    {
+      name: 'CoffeeScript',
+      url: 'http://coffeescript.org'
+    }, {
+      name: 'Jade',
+      url: 'http://jade-lang.com'
+    }, {
+      name: 'Sass',
+      url: 'http://sass-lang.com'
+    }, {
+      name: 'Gulp',
+      url: 'http://gulpjs.com'
+    }, {
+      name: 'git',
+      url: 'http://git-scm.com'
+    }, {
+      name: 'handlebars',
+      url: 'http://handlebarsjs.com'
+    }, {
+      name: 'node.js',
+      url: 'https://nodejs.org'
+    }, {
+      name: 'jQuery',
+      url: 'https://jquery.com'
+    }, {
+      name: 'PHP',
+      url: 'http://php.net'
+    }, {
+      name: 'Prestashop',
+      url: 'https://www.prestashop.com'
+    }, {
+      name: 'WordPress',
+      url: 'https://wordpress.org'
+    }
+  ];
+
+  Handlebars.registerHelper('logoapi', function(text) {
+    return new Handlebars.SafeString(('' + text).replace(/http(s)?:\/\//, ''));
+  });
+
+  competences = document.querySelector('#competences');
+
+  for (j = 0, len1 = skills.length; j < len1; j++) {
+    s = skills[j];
+    competences.innerHTML += window.cv.templates.skill(s);
   }
 
 }).call(this);
