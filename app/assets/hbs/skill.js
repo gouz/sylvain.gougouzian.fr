@@ -1,7 +1,7 @@
 this["cv"]["templates"]["skill"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"col-sm-2 skill-item\"><a href=\""
+  return "<div class=\"col-sm-2 col-xs-4 skill-item\"><a href=\""
     + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
     + "\" class=\"skill-link\" target=\"_blank\"><img src=\"assets/img/skills/"
     + ((stack1 = (helpers.logoapi || (depth0 && depth0.logoapi) || alias1).call(depth0,(depth0 != null ? depth0.url : depth0),{"name":"logoapi","hash":{},"data":data})) != null ? stack1 : "")
