@@ -12394,7 +12394,7 @@ this["cv"]["templates"]["portfolio"] = Handlebars.template({"compiler":[6,">= 2.
 this["cv"]["templates"]["skill"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"col-sm-1 col-xs-2 skill-item\"><a href=\""
+  return "<div class=\"col-sm-1 col-xs-3 skill-item\"><a href=\""
     + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
     + "\" class=\"skill-link\" target=\"_blank\"><img src=\"assets/img/skills/"
     + ((stack1 = (helpers.logoapi || (depth0 && depth0.logoapi) || alias1).call(depth0,(depth0 != null ? depth0.url : depth0),{"name":"logoapi","hash":{},"data":data})) != null ? stack1 : "")
@@ -12416,13 +12416,7 @@ this["cv"]["templates"]["skill"] = Handlebars.template({"compiler":[6,">= 2.0.0-
       $('html, body').stop().animate({
         scrollTop: $($anchor.attr('href')).offset().top
       }, 1500);
-      return event.preventDefault();
-    }).on('input propertychange', '.floating-label-form-group', function(event) {
-      return $(this).toggleClass('floating-label-form-group-with-value', !!$(event.target).val());
-    }).on('focus', '.floating-label-form-group', function() {
-      return $(this).addClass('floating-label-form-group-with-focus');
-    }).on('blur', '.floating-label-form-group', function() {
-      return $(this).removeClass('floating-label-form-group-with-focus');
+      return false;
     }).scrollspy({
       target: '.navbar-fixed-top'
     });
@@ -12430,7 +12424,10 @@ this["cv"]["templates"]["skill"] = Handlebars.template({"compiler":[6,">= 2.0.0-
       return $('.navbar-toggle:visible').click();
     });
     if (~~($(window).width()) > 768) {
-      return $('#lifetime').lifetime();
+      $('#lifetime').lifetime();
+      return setTimeout(function() {
+        return $('.ltp_next').trigger('click');
+      }, 100);
     }
   });
 

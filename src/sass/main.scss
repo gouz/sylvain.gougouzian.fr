@@ -170,11 +170,10 @@ section.success {
     text-decoration: underline;
   }
   .skill-item {
-    margin: 0 0 15px;
+    margin: 0 0 35px;
 
     .skill-link {
       display: block;
-      position: relative;
       margin: 0 auto;
       box-shadow: 0 0 3px rgba(33, 33, 33, 0.3);
       background: white;
@@ -182,6 +181,7 @@ section.success {
       padding-bottom: 100%;
       border-radius: 50%;
       text-align: center;
+      text-decoration: none;
 
       img {
         width: 100%;
@@ -191,33 +191,10 @@ section.success {
       }
 
       .caption {
-        top: 0;
-        border-radius: 50%;
-        background: opacify($brand-success, .9);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        transition: all ease 0.5s;
-        &:hover {
-          opacity: 1;
-        }
         .caption-content {
-          position: absolute;
-          width: 100%;
-          height: 20px;
-          font-size: 10px;
-          text-align: center;
-          top: 50%;
-          margin-top: -7px;
+          font-size: 12px;
           color: white;
-          i {
-            margin-top: -12px;
-          }
-          h3,
-          h4 {
-            margin: 0;
-          }
+          padding-top: 5px,
         }
       }
     }
