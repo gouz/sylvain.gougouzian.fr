@@ -43,6 +43,10 @@ skills = [
     name: 'WordPress'
     url: 'https://wordpress.org'
   }
+  {
+    name: 'Jasmine'
+    url: 'http://jasmine.github.io'
+  }
 ]
 
 Handlebars.registerHelper 'logoapi', (text) ->
