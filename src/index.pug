@@ -4,17 +4,19 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="Sylvain Gougouzian | CTO @ lidrea")
     title Sylvain Gougouzian
     link(rel="stylesheet", href="/less/main.less")
   body
-    .flex
+    main.flex
       section.nes-container.is-dark
         section.message-list
           section.message.-left
-            img(src="gouz.jpg", style="image-rendering: pixelated;")
             .nes-balloon.from-left.is-dark
+              header Sylvain Gougouzian - CTO @ lidrea
               p A new version is coming
-              a.nes-btn(href="https://lidrea.fr", target="_blank") lidrea.fr
-              a(href="https://github.com/gouz", target="_blank")
-                i.nes-octocat.animate
+              .flex.space-between
+                a(href="https://github.com/gouz", target="_blank", title="Github of gouz", rel="noopener")
+                  i.nes-octocat.animate
+                a.nes-btn(href="https://lidrea.fr", target="_blank", title="Link to lidrea.fr", rel="noopener") lidrea.fr
     script(src="/js/main.js", defer)
