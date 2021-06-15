@@ -2,23 +2,21 @@ doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(name="description", content="Sylvain Gougouzian | CTO @ lidrea")
     title Sylvain Gougouzian
-    link(rel="stylesheet", href="/less/main.less")
   body
-    main.flex
+    main
       div
         section.message-list
           section.message.-left
             .nes-balloon.from-left.is-dark
               header Sylvain Gougouzian - CTO @ lidrea
               p A new version is coming
-              .flex.space-between
+              .links
                 a(href="https://github.com/gouz", target="_blank", title="Github of gouz", rel="noopener")
                   i.nes-octocat.animate
                 a(href="https://linkedin.com/in/sylvain-gougouzian", target="_blank", title="LinkedIn of gouz", rel="noopener")
                   i.nes-icon.linkedin.is-large
                 a.nes-btn.is-success(href="https://lidrea.fr", target="_blank", title="Link to lidrea.fr", rel="noopener") lidrea.fr
-    script(src="/js/main.js", defer)
+    script(src="js/main.js", defer)

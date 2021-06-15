@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gouz/sylvain.gougouzian.fr.git"
@@ -16,16 +13,23 @@
     "url": "https://github.com/gouz/sylvain.gougouzian.fr/issues"
   },
   "homepage": "https://github.com/gouz/sylvain.gougouzian.fr#readme",
+  "scripts": {
+    "preparcel": "rm -rf .parcel-cache dist docs",
+    "parcel": "parcel $RUN src/index.pug",
+    "build": "RUN=build npm run parcel -- --no-cache --no-source-maps --dist-dir docs --public-url \"./\"",
+    "watch": "RUN=watch npm run parcel",
+    "dev": "RUN=serve npm run parcel -- --open"
+  },
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "less": "^4.1.1",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-nuke-dist": "^1.0.1",
-    "parcel-plugin-purgecss": "^3.0.0",
-    "pug": "^3.0.0"
+    "@parcel/transformer-less": "^2.0.0-beta.3.1",
+    "@parcel/transformer-pug": "^2.0.0-beta.3.1",
+    "autoprefixer": "^10.2.6",
+    "parcel": "^2.0.0-beta.3.1",
+    "postcss": "^8.3.4",
+    "tailwindcss": "^2.1.4"
   },
   "dependencies": {
-    "@fontsource/press-start-2p": "^4.2.1",
+    "@fontsource/press-start-2p": "^4.4.5",
     "nes.css": "^2.3.0"
   }
 }
