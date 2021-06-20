@@ -1,33 +1,23 @@
 #background {
-  @apply grid grid-cols-4;
+  @apply grid grid-cols-8;
 
   .tile {
     width: 101px;
     height: 171px;
     margin-top: -171px / 2;
   }
-
-  .cement {
-    background-image: url(../img/game/blocks/cement.png);
-  }
-
-  .dirt {
-    background-image: url(../img/game/blocks/dirt.png);
-  }
-
-  .earth {
-    background-image: url(../img/game/blocks/earth.png);
-  }
-
-  .grass {
-    background-image: url(../img/game/blocks/grass.png);
-  }
-
-  .water {
-    background-image: url(../img/game/blocks/water.png);
-  }
-
-  .wood {
-    background-image: url(../img/game/blocks/wood.png);
-  }
 }
+
+@images: cement, dirt, earth, grass, water, wood, pavement;
+
+.for-each-loop(@index) when (@index > 0) {
+  @image: extract(@images, @index);
+
+  .@{image} {
+    background-image: url("../img/game/blocks/@{image}.png");
+  }
+
+  .for-each-loop(@index - 1);
+}
+
+.for-each-loop(length(@images));

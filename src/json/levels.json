@@ -1,8 +1,8 @@
 {
   "level_1": [
-    ["earth", "earth", "earth", "earth"],
-    ["earth", "earth", "grass", "earth"],
-    ["earth", "earth", "earth", "earth"],
-    ["water", "wood", "water", "water"]
+    ["dirt", "earth", "earth", "earth", "earth", "earth", "earth", "earth"],
+    ["earth", "earth", "grass", "earth", "earth", "earth", "earth", "earth"],
+    ["earth", "earth", "earth", "earth", "earth", "earth", "earth", "earth"],
+    ["water", "wood", "water", "water", "earth", "earth", "earth", "earth"]
   ]
 }
