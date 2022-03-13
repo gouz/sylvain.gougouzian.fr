@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="fr")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -7,6 +7,7 @@ html(lang="en")
     title Sylvain Gougouzian
   body
     main
-      #background
-      #character
-    script(src="js/main.js", defer)
+      #canvas-wrapper
+        canvas#board-background
+        canvas#board-character
+    script(src="js/main.js", type="module")

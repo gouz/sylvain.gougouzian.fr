@@ -1,24 +1,30 @@
-html,
-body,
-pre,
-code,
-kbd,
-samp {
-  font-family: "Press Start 2P", cursive;
-}
+@tailwind base;
 
 html,
 body {
-  @apply w-full h-full;
+  @apply w-full h-full p-0 m-0;
 }
 
 body {
-  background-color: #212529;
+  @apply bg-slate-800;
 }
 
 main {
-  @apply flex items-center w-full h-full justify-center;
-}
+  @apply w-full h-full flex items-center justify-center;
 
-@import "./Character.less";
-@import "./Background.less";
+  #canvas-wrapper {
+    @apply rounded shadow-lg relative;
+
+    canvas {
+      @apply absolute inset-0;
+
+      &#board-background {
+        @apply z-0;
+      }
+
+      &#board-character {
+        @apply z-10;
+      }
+    }
+  }
+}

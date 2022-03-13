@@ -1,31 +1,19 @@
-import "../globals.css";
-
-import "nes.css/css/nes.min.css";
-import "@fontsource/press-start-2p";
-
 import "../less/main.less";
+import { config } from "../json/config.json";
+import { GameEngine } from "./GameEngine";
 
-import jsonUrl from "url:../json/levels.json";
-import { Background, Background } from "../ts/Background";
+const $cw = document.getElementById("canvas-wrapper");
+const $bb = document.getElementById("board-background");
+const $bc = document.getElementById("board-character");
+const width = config.bgTile.width * config.board.width;
+const height = (config.bgTile.height / 2) * (config.board.height + 1);
 
-fetch(jsonUrl).then((response) => {
-  return response.json().then((json) => {
-    let bg = new Background("#background", json);
-  });
+$cw.style.width = `${width}px`;
+$cw.style.height = `${height}px`;
+
+[$bb, $bc].forEach((e) => {
+  e.width = width;
+  e.height = height;
 });
 
-import { Character } from "../ts/Character";
-
-let gouz = new Character("#character", 64, 96);
-
-document.addEventListener("keydown", (event) => {
-  if (event.key == "ArrowDown") gouz.go("south");
-  else if (event.key == "ArrowUp") gouz.go("north");
-  else if (event.key == "ArrowLeft") gouz.go("west");
-  else if (event.key == "ArrowRight") gouz.go("east");
-  gouz.walk();
-});
-
-document.addEventListener("keyup", () => {
-  gouz.stop();
-});
+new GameEngine($bb, $bc);

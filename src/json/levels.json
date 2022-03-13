@@ -1,8 +1,179 @@
 {
-  "level_1": [
-    ["dirt", "earth", "earth", "earth", "earth", "earth", "earth", "earth"],
-    ["earth", "earth", "grass", "earth", "earth", "earth", "earth", "earth"],
-    ["earth", "earth", "earth", "earth", "earth", "earth", "earth", "earth"],
-    ["water", "wood", "water", "water", "earth", "earth", "earth", "earth"]
-  ]
+  "nyons": {
+    "backgrounds": [
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "earth"
+      ],
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "earth"
+      ],
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "earth"
+      ],
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "window",
+        "wood",
+        "window",
+        "grass",
+        "earth"
+      ],
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "earth"
+      ],
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "earth"
+      ],
+      [
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "grass",
+        "earth"
+      ],
+      [
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water",
+        "water"
+      ]
+    ],
+    "elements_bottom": [
+      [
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        "arbre",
+        ""
+      ],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "toit_nord_ouest",
+        "toit_nord",
+        "toit_nord_est",
+        "",
+        ""
+      ],
+      ["", "", "", "", "", "", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", "", "", "porte_fermee", "", "", ""],
+      ["", "", "", "", "", "", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", "", "", "", "", "", ""],
+      ["", "", "", "", "", "", "", "", "", "", "", ""]
+    ],
+    "elements_top": [
+      ["", "", "", "", "", "", "", "", "", "", "", "roche"],
+      ["", "", "", "", "", "", "", "", "", "", "", "roche"],
+      [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "toit_sud_ouest",
+        "toit_sud",
+        "toit_sud_est",
+        "",
+        "roche"
+      ],
+      ["", "", "", "", "", "", "", "", "", "", "", "roche"],
+      ["", "", "", "", "", "", "", "", "", "", "", "roche"],
+      ["", "", "", "", "", "", "", "", "", "", "", "roche"],
+      ["", "", "", "", "", "", "", "", "", "", "", "roche"]
+    ],
+    "around": {
+      "n": "isere",
+      "w": "montelimar"
+    }
+  }
 }

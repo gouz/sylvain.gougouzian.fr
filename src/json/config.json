@@ -1,0 +1,16 @@
+{
+  "config": {
+    "bgTile": {
+      "width": 101,
+      "height": 171
+    },
+    "board": {
+      "width": 12,
+      "height": 8
+    },
+    "character": {
+      "width": 64,
+      "height": 96
+    }
+  }
+}
