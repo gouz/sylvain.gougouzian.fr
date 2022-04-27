@@ -5,5 +5,15 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
   body
+    include pug/_mixins
+
+    include pug/header
+
+    main
+      include pug/pro
+      include pug/univ
+      include pug/hobbies
+
+    include pug/footer
 
     script(src="./js/main.js", type="module")
