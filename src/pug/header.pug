@@ -1,7 +1,18 @@
 header
   #photo
-    img(src="img/sylvain.jpg?as=webp", alt="Photo de Sylvain Gougouzian")
+    picture
+      source(
+        srcset="img/me.jpg?as=webp&width=384&height=576",
+        type="image/webp"
+      )
+      img(
+        src="img/me.jpg?width=384&height=576",
+        alt="Photo de Sylvain Gougouzian",
+        width="384",
+        height="576"
+      )
   .headline
-    h1 Sylvain Gougouzian
-    p.leading Fort de plus de 15 ans d'expérience salariale et entrepreneuriale, je recherche à nouveau un poste de développeur au sein d'une équipe technique pour de nouveaux challenges.
-    p.function Tech lead Front / CTO
+    h1 Bonjour, je suis
+      span Sylvain Gougouzian
+    p.function Tech Lead Front / CTO
+    p.leading Fort de plus de 15 ans d'expériences salariales et entrepreneuriales, je recherche à nouveau un poste de développeur au sein d'une équipe technique pour de nouveaux challenges.
