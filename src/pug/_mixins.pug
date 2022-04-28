@@ -10,8 +10,8 @@ mixin title(text, icon)
       include ../img/puzzle.svg
     span= text
 
-mixin step(year, company_school, func_dipl, excerpt, link)
-  li
+mixin step(year, company_school, func_dipl, link)
+  li.step
     p.step_title
       span.year= year
       if (null != link)
@@ -25,6 +25,5 @@ mixin step(year, company_school, func_dipl, excerpt, link)
       else
         span.company_school= company_school
       span.func_dipl= func_dipl
-    p.excerpt= excerpt
     .description
       block
