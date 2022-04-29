@@ -17,9 +17,13 @@ html(lang="en")
     include pug/header
 
     main
-      include pug/pro
-      include pug/univ
-      include pug/hobbies
+      section
+        include pug/pro
+      section
+        include pug/univ
+        include pug/skills
+      section.fusion
+        include pug/hobbies
 
     include pug/footer
 
