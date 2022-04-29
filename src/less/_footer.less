@@ -1,10 +1,12 @@
 footer {
   @apply bg-black;
-  @apply flex items-center justify-center;
+  @apply w-full;
+  @apply flex justify-between flex-col;
   @apply py-4;
 
   ul {
     @apply flex items-center justify-center space-x-6;
+    @apply flex-grow;
 
     li {
       a {
@@ -17,6 +19,27 @@ footer {
           @apply hidden;
         }
       }
+    }
+  }
+
+  #source {
+    @apply text-white;
+    @apply text-center;
+    @apply my-4;
+
+    &:hover {
+      @apply text-gray-400;
+    }
+  }
+}
+
+@screen lg {
+  footer {
+    @apply flex-row;
+
+    #source {
+      @apply text-right;
+      @apply mr-8 my-0;
     }
   }
 }
