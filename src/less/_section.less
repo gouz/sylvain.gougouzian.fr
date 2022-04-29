@@ -1,0 +1,102 @@
+main {
+  @apply px-8;
+
+  section {
+    @apply mb-8;
+
+    h2 {
+      @apply flex items-center;
+      @apply pb-2;
+      @apply mb-4;
+      @apply border-b border-gray-400;
+
+      svg {
+        @apply w-8 h-8;
+      }
+
+      span {
+        @apply text-2xl font-bold;
+        @apply pl-2;
+      }
+    }
+
+    .step {
+      @apply mb-2;
+
+      .step_title {
+        @apply text-xl;
+
+        .year {
+          @apply text-gray-500;
+          @apply font-bold;
+
+          &::after {
+            content: " : ";
+          }
+        }
+
+        a.company_school {
+          @apply border-b-2 border-dashed border-black;
+        }
+
+        .company_school {
+          @apply font-bold;
+        }
+
+        .func_dipl {
+          @apply text-gray-700;
+          @apply italic;
+
+          &::before {
+            @apply not-italic;
+            content: " : ";
+          }
+        }
+      }
+
+      .description {
+        @apply pt-1;
+      }
+    }
+  }
+
+  #skills {
+    @apply mt-8;
+  }
+}
+
+#skills,
+#hobbies {
+  .title {
+    @apply font-bold text-xl;
+    @apply mb-2;
+  }
+
+  & > ul > li {
+    @apply mb-4;
+  }
+
+  ul ul {
+    @apply pl-4;
+  }
+
+  a {
+    @apply text-gray-600;
+    @apply underline;
+
+    &:hover {
+      @apply text-black;
+    }
+  }
+}
+
+@screen lg {
+  main {
+    @apply grid grid-cols-2 gap-8;
+    @apply px-32;
+  }
+
+  #skills {
+    @apply mt-24;
+  }
+}

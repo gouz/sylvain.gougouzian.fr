@@ -2,29 +2,13 @@
 
 html,
 body {
-  @apply w-full h-full p-0 m-0;
+  @apply w-full h-full;
 }
 
 body {
-  @apply bg-slate-800;
+  @apply relative;
 }
 
-main {
-  @apply w-full h-full flex items-center justify-center;
-
-  #canvas-wrapper {
-    @apply rounded shadow-lg relative;
-
-    canvas {
-      @apply absolute inset-0;
-
-      &#board-background {
-        @apply z-0;
-      }
-
-      &#board-character {
-        @apply z-10;
-      }
-    }
-  }
-}
+@import "./_header.less";
+@import "./_section.less";
+@import "./_footer.less";

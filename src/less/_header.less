@@ -1,0 +1,79 @@
+header {
+  @apply pt-4;
+  @apply mb-8;
+  @apply bg-black;
+  @apply text-white;
+  @apply shadow-lg shadow-gray-500;
+  @apply flex flex-col items-center;
+
+  #photo {
+    width: 384px;
+    height: 576px;
+  }
+
+  .headline {
+    @apply flex flex-col items-stretch justify-center;
+    @apply px-8 pb-16;
+
+    h1 {
+      @apply text-4xl font-bold;
+      @apply mb-8 -mt-12;
+
+      span {
+        @apply block;
+      }
+    }
+
+    .function {
+      @apply text-2xl font-bold;
+      @apply mb-8;
+    }
+
+    .leading {
+      @apply italic text-xl;
+    }
+
+    .contact {
+      @apply pt-16;
+      @apply text-right;
+
+      .button {
+        @apply rounded-lg;
+        @apply bg-white;
+        @apply text-black;
+        @apply px-8 py-4;
+        @apply font-bold;
+
+        &:hover {
+          @apply bg-gray-300;
+          @apply shadow-lg shadow-gray-600;
+        }
+      }
+    }
+  }
+}
+
+@screen lg {
+  header {
+    @apply items-stretch flex-row-reverse justify-center;
+    @apply pb-0;
+
+    .headline {
+      @apply w-1/3;
+      @apply flex flex-col items-stretch justify-center;
+      @apply px-0;
+
+      h1 {
+        @apply mt-16;
+      }
+
+      .leading {
+        @apply pr-8;
+      }
+
+      .contact {
+        @apply pr-32 pt-8;
+      }
+    }
+  }
+}

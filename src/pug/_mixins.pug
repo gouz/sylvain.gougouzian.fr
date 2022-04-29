@@ -1,0 +1,29 @@
+mixin title(text, icon)
+  h2
+    if ('pro' == icon)
+      include ../img/office.svg
+    else if ('univ' == icon)
+      include ../img/library.svg
+    else if ('skills' == icon)
+      include ../img/academics.svg
+    else if ('hobbies' == icon)
+      include ../img/puzzle.svg
+    span= text
+
+mixin step(year, company_school, func_dipl, link)
+  li.step
+    p.step_title
+      span.year= year
+      if (null != link)
+        - var title = "Lien vers le site de " + company_school;
+        a.company_school(
+          href=link,
+          rel="noopener",
+          target="_blank",
+          title=title
+        )= company_school
+      else
+        span.company_school= company_school
+      span.func_dipl= func_dipl
+    .description
+      block
