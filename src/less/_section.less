@@ -44,13 +44,9 @@ main {
         }
 
         .func_dipl {
+          @apply block;
           @apply text-gray-700;
           @apply italic;
-
-          &::before {
-            @apply not-italic;
-            content: " : ";
-          }
         }
       }
 
@@ -94,6 +90,21 @@ main {
   main {
     @apply grid grid-cols-2 gap-8;
     @apply px-32;
+
+    section {
+      .step {
+        .step_title {
+          .func_dipl {
+            @apply inline;
+
+            &::before {
+              @apply not-italic;
+              content: " : ";
+            }
+          }
+        }
+      }
+    }
 
     .fusion {
       @apply col-span-2;
