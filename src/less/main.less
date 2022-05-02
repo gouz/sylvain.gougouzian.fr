@@ -9,6 +9,22 @@ body {
   @apply relative;
 }
 
+#qrcode {
+  @apply hidden;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  #qrcode {
+    @apply block;
+    @apply -mt-16 ml-20;
+    @apply w-64 h-64;
+  }
+}
+
 @import "./_header.less";
 @import "./_section.less";
 @import "./_footer.less";

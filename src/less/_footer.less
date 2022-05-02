@@ -43,3 +43,26 @@ footer {
     }
   }
 }
+
+@media print {
+  footer {
+    ul {
+      li {
+        a {
+          svg {
+            @apply w-5 h-5;
+          }
+
+          span {
+            @apply block;
+            @apply text-white text-xs;
+          }
+        }
+      }
+    }
+
+    #source {
+      @apply hidden;
+    }
+  }
+}

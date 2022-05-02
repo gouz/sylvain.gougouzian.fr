@@ -119,3 +119,129 @@ main {
     @apply mt-24;
   }
 }
+
+@media print {
+  main {
+    @apply grid grid-cols-2 gap-8;
+
+    section {
+      h2 {
+        @apply pb-1;
+        @apply mb-2;
+
+        svg {
+          @apply w-4 h-4;
+        }
+
+        span {
+          @apply text-base;
+        }
+      }
+
+      .step {
+        @apply mb-0;
+        @apply pb-1;
+        @apply relative;
+
+        &:before {
+          @apply absolute;
+          @apply top-0 bottom-0;
+          @apply bg-gray-500;
+          @apply ml-28;
+          width: 3px;
+          content: "";
+        }
+
+        .step_title {
+          @apply text-base;
+          @apply relative;
+          @apply pl-28;
+          @apply leading-3;
+
+          &::before {
+            @apply w-3 h-3;
+            @apply bg-gray-500;
+            @apply rounded-full;
+            @apply absolute;
+            @apply border-2 border-white;
+            @apply -ml-1 mt-2;
+            content: "";
+          }
+
+          .year {
+            @apply absolute;
+            @apply left-0;
+            @apply text-gray-400;
+            @apply font-normal text-xs text-right;
+            @apply w-28;
+            @apply pr-4 pt-1;
+
+            &::after {
+              content: "";
+            }
+          }
+
+          a.company_school {
+            @apply border-none;
+          }
+
+          .company_school {
+            @apply text-xs;
+            @apply pl-4;
+          }
+
+          .func_dipl {
+            @apply block;
+            @apply pl-4;
+            @apply font-bold text-xs not-italic;
+            @apply text-gray-600;
+          }
+        }
+
+        .description {
+          /*
+          @apply pl-32 pt-0;
+          @apply text-xs;
+          */
+          @apply hidden;
+        }
+      }
+      &.fusion {
+        @apply mb-7;
+      }
+    }
+
+    #skills,
+    #hobbies {
+      h2 {
+        @apply mb-0;
+      }
+
+      .title {
+        @apply text-xs;
+        @apply mb-0;
+      }
+
+      & > ul > li {
+        @apply mb-0;
+      }
+
+      ul ul {
+        @apply pl-6;
+
+        > li {
+          @apply list-disc;
+          @apply text-xs;
+        }
+      }
+
+      a {
+        @apply hidden;
+      }
+    }
+
+    #hobbies {
+      @apply -mt-64;
+    }
+  }
+}

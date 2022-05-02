@@ -81,3 +81,54 @@ header {
     }
   }
 }
+
+@media print {
+  header {
+    @apply flex-row-reverse justify-center;
+    @apply mb-1;
+    @apply shadow-none;
+
+    #photo {
+      @apply rounded-3xl;
+      @apply w-32 h-auto;
+      @apply overflow-hidden;
+      @apply border-2 border-gray-300;
+      @apply mt-4 -mb-4 mr-6;
+      @apply bg-black;
+
+      img {
+        @apply w-full h-auto;
+      }
+    }
+
+    .headline {
+      @apply pb-0;
+
+      h1 {
+        @apply mt-0 mb-3;
+        @apply text-2xl;
+
+        span {
+          @apply hidden;
+
+          &.print {
+            @apply block;
+          }
+        }
+      }
+
+      .function {
+        @apply font-normal text-xl;
+        @apply mb-4;
+      }
+
+      .leading {
+        @apply text-xs leading-4;
+      }
+
+      .contact {
+        @apply hidden;
+      }
+    }
+  }
+}
