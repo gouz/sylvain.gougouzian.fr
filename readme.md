@@ -6,7 +6,7 @@ Made with 💖 with
 
 - [ParcelJS](https://parceljs.org/): a very nice bundler I appreciate
 - [PugJS](https://pugjs.org/): Write less HTML, includes, mixins, ... my best companion to generate HTML
-- [TailwindCSS](https://tailwindcss.com/): For me, a simplification to write CSS, and normalize it
+- [TailwindCSS](https://tailwindcss.com/): To me, a simplification to write CSS, and normalize it
 - [Less](https://lesscss.org/): I use the nesting and import at most
 
 ## Build
