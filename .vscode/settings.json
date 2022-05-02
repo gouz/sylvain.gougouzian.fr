@@ -1,3 +1,8 @@
 {
-  "conventionalCommits.scopes": ["new_style", "abandonned", "new version"]
+  "conventionalCommits.scopes": [
+    "new_style",
+    "abandonned",
+    "new version",
+    "print"
+  ]
 }
