@@ -37,6 +37,11 @@ main {
 
         a.company_school {
           @apply border-b-2 border-dashed border-black;
+
+          &:hover {
+            @apply text-gray-500;
+            @apply border-solid;
+          }
         }
 
         .company_school {
@@ -56,13 +61,25 @@ main {
     }
   }
 
-  #skills {
+  #univ {
     @apply mt-8;
+  }
+
+  #talks {
+    ul > li {
+      @apply my-2;
+
+      .date {
+        @apply font-bold;
+        @apply mr-2;
+      }
+    }
   }
 }
 
 #skills,
-#hobbies {
+#hobbies,
+#talks {
   .title {
     @apply font-bold text-xl;
     @apply mb-2;
@@ -93,6 +110,8 @@ main {
 
     section {
       .step {
+        @apply mb-6;
+
         .step_title {
           .func_dipl {
             @apply inline;
@@ -106,17 +125,9 @@ main {
       }
     }
 
-    .fusion {
-      @apply col-span-2;
-
-      #hobbies > ul {
-        @apply grid grid-cols-2 gap-8;
-      }
+    #univ {
+      @apply mt-24;
     }
-  }
-
-  #skills {
-    @apply mt-24;
   }
 }
 
@@ -125,6 +136,8 @@ main {
     @apply grid grid-cols-2 gap-8;
 
     section {
+      @apply mb-0;
+
       h2 {
         @apply pb-1;
         @apply mb-2;
@@ -171,7 +184,7 @@ main {
           .year {
             @apply absolute;
             @apply left-0;
-            @apply text-gray-400;
+            @apply text-gray-600;
             @apply font-normal text-xs text-right;
             @apply w-28;
             @apply pr-4 pt-1;
@@ -206,17 +219,11 @@ main {
           @apply hidden;
         }
       }
-      &.fusion {
-        @apply mb-7;
-      }
     }
 
     #skills,
-    #hobbies {
-      h2 {
-        @apply mb-0;
-      }
-
+    #hobbies,
+    #talks {
       .title {
         @apply text-xs;
         @apply mb-0;
@@ -224,6 +231,7 @@ main {
 
       & > ul > li {
         @apply mb-0;
+        @apply text-xs;
       }
 
       ul ul {
@@ -240,8 +248,16 @@ main {
       }
     }
 
-    #hobbies {
-      @apply -mt-64;
+    #univ {
+      @apply mt-4;
+    }
+
+    #talks {
+      @apply -mt-40;
+
+      ul > li {
+        @apply my-0;
+      }
     }
   }
 }

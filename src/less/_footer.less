@@ -46,7 +46,12 @@ footer {
 
 @media print {
   footer {
+    @apply bg-white;
+    @apply pl-8;
+    @apply -mt-16;
+
     ul {
+      @apply justify-start space-x-3;
       li {
         a {
           svg {
@@ -55,7 +60,7 @@ footer {
 
           span {
             @apply block;
-            @apply text-white text-xs;
+            @apply text-black text-xs;
           }
         }
       }

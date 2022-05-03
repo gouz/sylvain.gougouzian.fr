@@ -8,11 +8,13 @@ mixin title(text, icon)
       include ../img/academics.svg
     else if ('hobbies' == icon)
       include ../img/puzzle.svg
+    else if ('talks' == icon)
+      include ../img/talk.svg
     span= text
 
 mixin step(year, company_school, func_dipl, link)
   li.step
-    p.step_title
+    h3.step_title
       span.year= year
       if (null != link)
         - var title = "Lien vers le site de " + company_school;
