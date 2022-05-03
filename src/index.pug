@@ -32,4 +32,11 @@ html(lang="en")
 
     include pug/footer
 
+    a#print(
+      href="javascript:window.print();",
+      title="Imprimer mon CV (sans les marges)"
+    )
+      include img/print.svg
+      span Imprimer mon CV (sans les marges)
+
     script(src="./js/main.js", type="module")

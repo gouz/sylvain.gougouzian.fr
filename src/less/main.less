@@ -13,15 +13,44 @@ body {
   @apply hidden;
 }
 
+#print {
+  @apply hidden;
+}
+
+@screen lg {
+  #print {
+    @apply block;
+    @apply absolute top-5 right-5;
+    @apply text-gray-400;
+
+    svg {
+      @apply w-8 h-8;
+    }
+
+    span {
+      @apply hidden;
+    }
+
+    &:hover {
+      @apply text-white;
+    }
+  }
+}
+
 @media print {
   body {
     -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
   }
 
   #qrcode {
     @apply block;
     @apply -mt-16 ml-20;
     @apply w-64 h-64;
+  }
+
+  @page {
+    margin: 0;
   }
 }
 
