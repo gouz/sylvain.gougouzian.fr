@@ -1,6 +1,6 @@
 # Sylvain.Gougouzian.fr
 
-Source code of my portfolio website
+Source code of my resume website
 
 Made with 💖 with
 
