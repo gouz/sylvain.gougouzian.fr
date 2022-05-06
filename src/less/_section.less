@@ -65,6 +65,21 @@ main {
     @apply mt-8;
   }
 
+  #projects {
+    @apply mt-8;
+
+    li {
+      @apply mb-1;
+    }
+
+    a {
+      &:hover {
+        @apply text-gray-500;
+        @apply underline;
+      }
+    }
+  }
+
   #talks {
     ul > li {
       @apply my-2;
@@ -125,7 +140,8 @@ main {
       }
     }
 
-    #univ {
+    #univ,
+    #projects {
       @apply mt-24;
     }
   }
@@ -258,6 +274,10 @@ main {
       ul > li {
         @apply my-0;
       }
+    }
+
+    #projects {
+      @apply hidden;
     }
   }
 }
