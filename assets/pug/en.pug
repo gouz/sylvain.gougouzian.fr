@@ -1,0 +1,27 @@
+include _mixins
+
+include EN/header
+
+main
+    section
+        include EN/pro
+    section
+        include EN/skills
+        include EN/univ
+    section
+        include EN/talks
+        include EN/projects
+    section
+        include EN/hobbies
+
+include EN/footer
+
+#utils
+    a(href="index.html" title="Version française") FR
+    a.selected(href="en.html" title="English version") EN
+    a#print(
+        href="javascript:window.print();",
+        title="Print my resume"
+    )
+        include ../img/print.svg
+        span Print my resume

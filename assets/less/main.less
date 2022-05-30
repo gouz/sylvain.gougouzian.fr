@@ -1,0 +1,88 @@
+@tailwind base;
+
+html,
+body {
+  @apply w-full h-full;
+}
+
+body {
+  @apply relative;
+  @apply bg-gray-100;
+}
+
+#qrcode {
+  @apply hidden;
+}
+
+#print {
+  @apply hidden;
+}
+
+.to-print {
+  @apply hidden;
+}
+
+@screen lg {
+  #utils {
+    @apply flex space-x-2 items-center;
+    @apply absolute top-5 right-5;
+    @apply text-gray-400;
+
+    svg {
+      @apply w-8 h-8;
+    }
+
+    span {
+      @apply hidden;
+    }
+
+    a {
+      &.selected {
+        @apply border-b border-solid border-white;
+        @apply text-white;
+      }
+
+      &:hover {
+        @apply text-white;
+      }
+    }
+  }
+
+  #print {
+    @apply block;
+  }
+}
+
+@media print {
+  body {
+    @apply bg-white;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  #qrcode {
+    @apply block;
+    @apply ml-12;
+    @apply w-52 h-52;
+  }
+
+  .no-print {
+    @apply hidden;
+  }
+
+  #utils {
+    @apply hidden;
+  }
+
+  .to-print {
+    @apply block;
+  }
+
+  @page {
+    margin: 0;
+  }
+}
+
+@import "./_header.less";
+@import "./_section.less";
+@import "./_footer.less";

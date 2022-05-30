@@ -1,0 +1,27 @@
+include _mixins
+
+include FR/header
+
+main
+    section
+        include FR/pro
+    section
+        include FR/skills
+        include FR/univ
+    section
+        include FR/talks
+        include FR/projects
+    section
+        include FR/hobbies
+
+include FR/footer
+
+#utils
+    a.selected(href="index.html" title="Version française") FR
+    a(href="en.html" title="English version") EN
+    a#print(
+        href="javascript:window.print();",
+        title="Imprimer mon CV"
+    )
+        include ../img/print.svg
+        span Imprimer mon CV

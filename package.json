@@ -1,6 +1,6 @@
 {
   "name": "sylvain.gougouzian.fr",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Sylvain Gougouzian | Tech Lead / CTO",
   "repository": {
     "type": "git",
@@ -12,49 +12,20 @@
     "url": "https://github.com/gouz/sylvain.gougouzian.fr/issues"
   },
   "homepage": "https://github.com/gouz/sylvain.gougouzian.fr#readme",
-  "source": [
-    "src/index.pug"
-  ],
   "scripts": {
-    "preparcel": "rm -rf dist docs .parcel-cache",
-    "parcel": "parcel $RUN",
-    "build": "RUN=build npm run parcel -- --no-cache --no-source-maps --dist-dir docs --public-url \"./\"",
-    "watch": "RUN=watch npm run parcel",
-    "dev": "RUN=serve npm run parcel -- --open"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@parcel/compressor-brotli": "2.5.0",
-    "@parcel/compressor-gzip": "2.5.0",
-    "@parcel/optimizer-css": "2.5.0",
-    "@parcel/packager-raw-url": "^2.5.0",
-    "@parcel/packager-xml": "^2.5.0",
-    "@parcel/transformer-css-experimental": "2.3.2",
-    "@parcel/transformer-less": "2.5.0",
-    "@parcel/transformer-pug": "2.5.0",
-    "@prettier/plugin-pug": "2.0.0",
-    "autoprefixer": "10.4.4",
-    "eslint": "8.14.0",
-    "parcel": "2.5.0",
-    "parcel-config-pwa-manifest": "^0.1.1",
-    "parcel-reporter-static-files-copy": "1.3.4",
-    "postcss": "8.4.12",
-    "prettier": "2.6.2",
-    "sharp": "^0.29.3",
-    "tailwindcss": "3.0.24"
-  },
-  "pwaManifest": {
-    "name": "Sylvain Gougouzian",
-    "shortName": "gouz",
-    "startURL": "./",
-    "theme": "#000000",
-    "generateIconOptions": {
-      "baseIcon": "./src/img/sylvain.jpg",
-      "sizes": [
-        192,
-        384,
-        512
-      ],
-      "genFavicons": true
-    }
+    "@prettier/plugin-pug": "^2.0.0",
+    "autoprefixer": "^10.4.7",
+    "less": "^4.1.2",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "pug": "^3.0.2",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.9",
+    "vite-plugin-pug": "^0.3.1"
   }
 }
