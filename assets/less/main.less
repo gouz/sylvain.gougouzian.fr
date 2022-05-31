@@ -22,32 +22,32 @@ body {
   @apply hidden;
 }
 
-@screen lg {
-  #utils {
-    @apply flex space-x-2 items-center;
-    @apply absolute top-5 right-5;
-    @apply text-gray-400;
+#utils {
+  @apply flex space-x-2 items-center;
+  @apply absolute top-5 right-5;
+  @apply text-gray-400;
 
-    svg {
-      @apply w-8 h-8;
-    }
-
-    span {
-      @apply hidden;
-    }
-
-    a {
-      &.selected {
-        @apply border-b border-solid border-white;
-        @apply text-white;
-      }
-
-      &:hover {
-        @apply text-white;
-      }
-    }
+  svg {
+    @apply w-8 h-8;
   }
 
+  span {
+    @apply hidden;
+  }
+
+  a {
+    &.selected {
+      @apply border-b border-solid border-white;
+      @apply text-white;
+    }
+
+    &:hover {
+      @apply text-white;
+    }
+  }
+}
+
+@screen lg {
   #print {
     @apply block;
   }
