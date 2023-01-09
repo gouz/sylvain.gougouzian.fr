@@ -88,6 +88,18 @@ main {
         @apply font-bold;
         @apply mr-2;
       }
+
+      ul ul {
+        @apply text-sm;
+
+        a {
+          @apply no-underline;
+
+          &:hover {
+            @apply underline;
+          }
+        }
+      }
     }
   }
 }
