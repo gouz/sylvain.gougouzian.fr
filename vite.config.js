@@ -1,9 +1,10 @@
 import { defineConfig } from "vite";
 import pugPlugin from "vite-plugin-pug";
 const { resolve } = require("path");
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 export default defineConfig({
-  plugins: [pugPlugin()],
+  plugins: [pugPlugin(), ViteImageOptimizer()],
   build: {
     rollupOptions: {
       input: {
